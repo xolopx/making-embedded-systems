@@ -13,9 +13,9 @@ I have implemented all of these features in:
 ### Task 2 ###
 **Investigate further, using the processor manual:** (Answers from RM0434)
   - **Q: What are the hardware registers that cause the LED to turn on and off? (From the processor manual, don’t worry about initialization.)**
-  - A: There's a bit reset register (BRR) for each GPIO port (A-E and H) on the micro and each bit in the register corresponds to a pin belonging to the GPIO port. The value of the bit corresponding to the led pin is what turns the LED led off or on.
+  - A: There's a bit set/reset register (BSRR) for each GPIO port (A-E and H) on the micro and each bit in the register corresponds to a pin belonging to the GPIO port. The value of the bit corresponding to the led pin is what turns the LED led off or on.
 
-  ![](images/homework_3/GPIOx_BRR.png)
+  ![](images/homework_3/GPIOx_BSRR.png)
 
   - **Q: What are the registers that you read in order to find out the state of the button?**
 
