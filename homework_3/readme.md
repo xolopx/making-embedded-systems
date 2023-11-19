@@ -12,16 +12,16 @@ I have implemented all of these features in:
   - **Q: What are the hardware registers that cause the LED to turn on and off? (From the processor manual, don’t worry about initialization.)**
   - A: There's a bit set/reset register (BSRR) for each GPIO port (A-E and H) on the micro and each bit in the register corresponds to a pin belonging to the GPIO port. The value of the bit corresponding to the led pin is what turns the LED led off or on.
 
-  ![](images/homework_3/GPIOx_BSRR.png)
+  ![](images/GPIOx_BSRR.png)
 
   - **Q: What are the registers that you read in order to find out the state of the button?**
 
   - A: Similar to the BRR register there's an IDR register for every GPIO port on the micro and each bit corresponds to a pin of that port. 
 
-  ![](images/homework_3/GPIOx_IDR.png)
+  ![](images/GPIOx_IDR.png)
 
   - **Q: Can you read the register directly and see the button change in a debugger or by printing out these value of the memory at the register’s address?**
   - A: The button I used is on PORTC and is pin 4. In the images below you can see that I have located the corresponding IDR register and have halted execution at the moment the ISR was triggered by a button press and the 5th bit (4th pin) of the IDR register for PORTC is high.
-  ![](images/homework_3/button_press_IDR.png)
-  ![](images/homework_3/IOC.png)
+  ![](images/button_press_IDR.png)
+  ![](images/IOC.png)
 
